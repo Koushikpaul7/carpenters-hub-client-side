@@ -16,6 +16,7 @@ import MyOrders from './Components/Dashboard/MyOrders';
 import Review from './Components/Dashboard/GiveReview';
 import GiveReview from './Components/Dashboard/GiveReview';
 import MyProfile from './Components/Dashboard/MyProfile';
+import Users from './Components/Dashboard/Users';
 
 function App() {
   return (
@@ -36,7 +37,9 @@ function App() {
        </RequireAuth>}>
         <Route index element={<MyOrders></MyOrders>}></Route>
         <Route path='review' element={<GiveReview></GiveReview>}></Route>
+        <Route path='review' element={<GiveReview></GiveReview>}></Route>
         <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+        <Route path='users' element={<Users></Users>}></Route>
 
        </Route>
      </Routes>
