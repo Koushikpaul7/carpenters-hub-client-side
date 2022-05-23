@@ -17,6 +17,10 @@ import Review from './Components/Dashboard/GiveReview';
 import GiveReview from './Components/Dashboard/GiveReview';
 import MyProfile from './Components/Dashboard/MyProfile';
 import Users from './Components/Dashboard/Users';
+import ManageAllOrders from './Components/Dashboard/ManageAllOrders';
+import ManageProducts from './Components/Dashboard/ManageProducts';
+import AddProducts from './Components/Dashboard/AddProducts';
+import RequireAdmin from './Components/Login/RequireAdmin';
 
 function App() {
   return (
@@ -39,7 +43,18 @@ function App() {
         <Route path='review' element={<GiveReview></GiveReview>}></Route>
         <Route path='review' element={<GiveReview></GiveReview>}></Route>
         <Route path='profile' element={<MyProfile></MyProfile>}></Route>
-        <Route path='users' element={<Users></Users>}></Route>
+        <Route path='users' element={<RequireAdmin>
+          <Users></Users>
+        </RequireAdmin>}></Route>
+        <Route path='manageOrders' element={<RequireAdmin>
+          <ManageAllOrders></ManageAllOrders>
+        </RequireAdmin>}></Route>
+        <Route path='manageProducts' element={<RequireAdmin>
+          <ManageProducts></ManageProducts>
+        </RequireAdmin>}></Route>
+        <Route path='addProduct' element={<RequireAdmin>
+          <AddProducts></AddProducts>
+        </RequireAdmin>}></Route>
 
        </Route>
      </Routes>
