@@ -8,12 +8,12 @@ const PurchasePage = () => {
     const [user] = useAuthState(auth);
     const [disable, setDisable] = useState(false);
     const { productId } = useParams();
-    const [product, SetProduct] = useState({});
+    const [product, setProduct] = useState({});
     useEffect(() => {
         const url = `http://localhost:5000/product/${productId}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => SetProduct(data));
+            .then(data => setProduct(data));
     }, []);
 
 
@@ -53,6 +53,7 @@ const PurchasePage = () => {
                     console.log(data);
                     toast(`Your order for ${product.name} is placed`)
                 })
+                
     }
 
     return (
