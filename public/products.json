@@ -1,0 +1,83 @@
+[
+    {
+      "_id": "628930dca7d0d3a36b1ce5d7",
+      "price": 356,
+      "description": "",
+      "picture": "https://i.ibb.co/KNdZndB/hammer.jpg",
+      "min_order": 100,
+      "total_quantity": 1150,
+      "name": "Hammer"
+    },
+    {
+      "_id": "628930dc742c169b5c6db81a",
+      "price": 297,
+      "description": "A very useful and heavy material for working purpose",
+      "picture": "https://i.ibb.co/TgnFq4b/mallet.jpg",
+      "min_order": 100,
+      "total_quantity": 1954,
+      "name": "Mallet"
+    },
+    {
+      "_id": "628930dc7a5de87eb664ae8b",
+      "price": 390,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/JcWPtsH/Chisel.jpg",
+      "min_order": 100,
+      "total_quantity": 1450,
+      "name": "Chisel"
+    },
+    {
+      "_id": "628930dc87e93c17ec7ef21a",
+      "price": 306,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/ck0Zn6x/hacksaw.png",
+      "min_order": 100,
+      "total_quantity": 1950,
+      "name": "Hacksaw"
+    },
+    {
+      "_id": "628930dce8960a6db0f312ff",
+      "price": 380,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/8PYvZzh/soft-mallet.jpg",
+      "min_order": 100,
+      "total_quantity": 1289,
+      "name": "Soft mallet"
+    },
+    {
+      "_id": "628930dcd20fe863a442a283",
+      "price": 213,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/QPj27fh/plane.jpg",
+      "min_order": 100,
+      "total_quantity": 1148,
+      "name": "Allison}"
+    },
+    {
+      "_id": "628930dc755b0d111c61e5a0",
+      "price": 102,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/MnvrzXr/handsaw.webp",
+      "min_order": 100,
+      "total_quantity": 1063,
+      "name": "Handsaw"
+    },
+    {
+      "_id": "628930dcdb4a87ca8c6bb181",
+      "price": 196,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/M5Yd3K8/trsquare.jpg",
+      "min_order": 100,
+      "total_quantity": 1676,
+      "name": "Tri-square"
+    },
+    {
+      "_id": "628930dc4e100591527640bc",
+      "price": 377,
+      "description": "An useful and very effective tool",
+      "picture": "https://i.ibb.co/gzgZ7Vq/screw.jpg",
+      "min_order": 100,
+      "total_quantity": 1789,
+      "name": "Screw Driver"
+    }
+  ]
