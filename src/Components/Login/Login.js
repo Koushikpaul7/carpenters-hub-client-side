@@ -3,6 +3,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../Hooks/useToken';
 import Loading from '../Shared/Loading';
 
 const Login = () => {
@@ -29,13 +30,17 @@ const Login = () => {
 
 
      let from = location.state?.from?.pathname || "/";
+     const[token]=useToken(user||gUser)
+
      useEffect(()=>{
-        if (user||gUser) {
+        if (token) {
             navigate(from, { replace: true });
     
         }
     
-     },[user,gUser,navigate,from])
+     },[token,navigate,from])
+
+     
 
      
 
