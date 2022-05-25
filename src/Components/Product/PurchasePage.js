@@ -10,7 +10,7 @@ const PurchasePage = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`;
+        const url = `https://aqueous-ravine-04948.herokuapp.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -41,7 +41,7 @@ const PurchasePage = () => {
                 address
             }
             //console.log(orderData);
-            fetch('http://localhost:5000/order',{
+            fetch('https://aqueous-ravine-04948.herokuapp.com/order',{
                 method:'POST',
                 headers:{
                     'content-type':'application/json'

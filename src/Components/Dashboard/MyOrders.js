@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
@@ -10,7 +10,7 @@ const MyOrders = () => {
     const navigate=useNavigate();
     useEffect(()=>{
        if(user){
-        fetch(`http://localhost:5000/order?customer=${user.email}`,{
+        fetch(`https://aqueous-ravine-04948.herokuapp.com/order?customer=${user.email}`,{
             method:"GET",
             headers:{
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -35,7 +35,7 @@ const MyOrders = () => {
             <h2 className='text-secondary  text-xl mb-4' >My orders: {orders.length}</h2>
 
             <div class="overflow-x-auto">
-  <table class="table w-full">
+  <table class="table w-full sm:w-full">
 
     <thead>
       <tr>
@@ -44,6 +44,7 @@ const MyOrders = () => {
         <th>Material</th>
         <th>Order quantity</th>
         <th>Total amount</th>
+        <th>Payment</th>
       </tr>
     </thead>
     <tbody>
@@ -54,6 +55,10 @@ const MyOrders = () => {
                 <td>{o.product}</td>
                 <td>{o.orders}</td>
                 <td>{o.price}</td>
+            <td>
+                {(o.price&& !o.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
+                {(o.price&& o.paid) && <span className='text-success text-mono'>Paid</span>}
+                </td>
               </tr>)
         }
       

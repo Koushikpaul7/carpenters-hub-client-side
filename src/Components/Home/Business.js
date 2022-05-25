@@ -4,7 +4,7 @@ const Business = () => {
     return (
 
         <>
-        <h2 className='text-primary font-bold text-center text-2xl mx-12'>Trust Our Business With Our Large Service</h2>
+        <h2 className='text-primary font-bold text-center text-2xl '>Trust Our Business With Our Large Service</h2>
         <div class="stats stats-vertical lg:stats-horizontal shadow-2xl flex items-center text-center mt-10">
   <div class="stat h-64">
     <div class="stat-title text-secondary">Orders</div>

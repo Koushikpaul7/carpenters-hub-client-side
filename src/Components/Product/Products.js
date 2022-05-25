@@ -5,7 +5,7 @@ import Product from './Product';
 const Products = () => {
     const[products,setProducts]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/product')
+        fetch('https://aqueous-ravine-04948.herokuapp.com/product')
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
@@ -15,7 +15,9 @@ const Products = () => {
     }
 
     return (
-        <div className='container mt-4'>
+        <div 
+       
+        className='container mt-4'>
         <h2 className='text-center text-primary text-2xl font-bold'>Our Materials</h2>
             <div className='grid grid-cols-1 lg:grid-cols-3'>
             {

@@ -21,10 +21,17 @@ import ManageAllOrders from './Components/Dashboard/ManageAllOrders';
 import ManageProducts from './Components/Dashboard/ManageProducts';
 import AddProducts from './Components/Dashboard/AddProducts';
 import RequireAdmin from './Components/Login/RequireAdmin';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
+import Payment from './Components/Dashboard/Payment';
 
 function App() {
+  useEffect(()=>{
+    AOS.init();
+  },[]);
   return (
-    <div>
+    <div className='App'>
      <Navbar></Navbar>
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
@@ -36,12 +43,14 @@ function App() {
        <Route path='/products/:productId' element={<RequireAuth>
         <PurchasePage></PurchasePage>
        </RequireAuth>}></Route>
+
+
        <Route path='/dashboard' element={<RequireAuth>
        <Dashboard></Dashboard>
        </RequireAuth>}>
         <Route index element={<MyOrders></MyOrders>}></Route>
         <Route path='review' element={<GiveReview></GiveReview>}></Route>
-        <Route path='review' element={<GiveReview></GiveReview>}></Route>
+        <Route path='payment/:id' element={<Payment></Payment>}></Route>
         <Route path='profile' element={<MyProfile></MyProfile>}></Route>
         <Route path='users' element={<RequireAdmin>
           <Users></Users>

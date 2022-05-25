@@ -16,13 +16,13 @@ const Home = () => {
         .then(data=>setProducts(data))
     },[])
     return (
-        <div className='mx-12'>
+        <div className=''>
             <Banner></Banner>
-            <div className='container my-10 '>
+            <div className=''>
                 <h2 className='text-center text-primary text-2xl font-bold'>Our Materials</h2>
                     <div className='grid grid-cols-1 lg:grid-cols-3'>
                     {
-                        products.slice(0,3).map(product=><Product key={product._id} product={product}></Product>)
+                        products.slice(1,4).map(product=><Product key={product._id} product={product}></Product>)
                     }
                     
                     </div>
