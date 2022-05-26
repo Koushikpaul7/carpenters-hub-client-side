@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../Hooks/useToken';
 import Loading from '../Shared/Loading';
@@ -56,7 +57,7 @@ const Login = () => {
        const email=getValues('email');
        if(email){
         await sendPasswordResetEmail(email);
-        alert('Sent email for reset password ');
+        toast.success('Sent email for reset password ');
        }
        else{
            alert('Enter your email address');
