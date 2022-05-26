@@ -27,6 +27,7 @@ import { useEffect } from 'react';
 import Payment from './Components/Dashboard/Payment';
 import Blog from './Components/Blog/Blog';
 import Portfolio from './Components/Portfolio/Portfolio';
+import Notfound from './Components/Notfound';
 
 function App() {
   useEffect(()=>{
@@ -52,10 +53,10 @@ function App() {
        <Route path='/dashboard' element={<RequireAuth>
        <Dashboard></Dashboard>
        </RequireAuth>}>
-        <Route index element={<MyOrders></MyOrders>}></Route>
+       <Route index element={<MyProfile></MyProfile>}></Route>
+        <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
         <Route path='review' element={<GiveReview></GiveReview>}></Route>
         <Route path='payment/:id' element={<Payment></Payment>}></Route>
-        <Route path='profile' element={<MyProfile></MyProfile>}></Route>
         <Route path='users' element={<RequireAdmin>
           <Users></Users>
         </RequireAdmin>}></Route>
@@ -70,6 +71,7 @@ function App() {
         </RequireAdmin>}></Route>
 
        </Route>
+       <Route path='*' element={<Notfound></Notfound>}></Route>
      </Routes>
      <ToastContainer/>
      <Footer></Footer>
