@@ -10,7 +10,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L0nMxCGiGPiibhRx27qeA1IWQ42s2ic2kzKYUaxZugf7PQvar0ofomRBiV9u5twk9hNBr5JHZBKsxuFJJAsphft004rPXNO83');
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://aqueous-ravine-04948.herokuapp.com/order/${id}`;
 
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: "GET",

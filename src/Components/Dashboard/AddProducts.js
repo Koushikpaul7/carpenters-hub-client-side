@@ -10,11 +10,12 @@ const AddProducts = () => {
     const onSubmit = (data,event) => {
         console.log(data);
 
-        const url=`http://localhost:5000/product`;
+        const url=`https://aqueous-ravine-04948.herokuapp.com/product`;
         fetch(url,{
             method:'POST',
             headers: {
-               'content-type':'application/json'
+               'content-type':'application/json',
+               'authorization':`Bearer ${localStorage.getItem('accessToken')}`
             },
             body:JSON.stringify(data)
         })
@@ -37,7 +38,13 @@ const AddProducts = () => {
       <input placeholder='Name' className='mb-2 input input-bordered input-primary w-full max-w-xs' value={user.email} {...register("email", { required: true, maxLength: 200 })} />
       <input placeholder='price per product' className='mb-2 input input-bordered input-primary w-full max-w-xs' {...register("price", { required: true, maxLength: 20 })} />
       <input placeholder='photo url' className='mb-2 input input-bordered input-primary w-full max-w-xs' {...register("picture", { required: true, maxLength: 1000 })} />
-      <input placeholder='minimum order' className='mb-2 input input-bordered input-primary w-full max-w-xs' {...register("min_order", { required: true, maxLength: 20 })} />
+     
+      <select {...register("min_order")} class="select w-full max-w-xs">
+                <option disabled selected>Minimum order</option>
+                    <option>100</option>
+                </select>
+
+
       <input placeholder='description' className='mb-2 input input-bordered input-primary w-full max-w-xs' {...register("description")} />
       <input placeholder='quantity' className='mb-2 input input-bordered input-primary w-full max-w-xs' type="number" {...register("total_quantity")} />
       <input className='btn btn-success rounded shadow' type="submit" value='Add product' />

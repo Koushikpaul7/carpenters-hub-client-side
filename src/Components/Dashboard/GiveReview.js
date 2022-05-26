@@ -10,7 +10,7 @@ const GiveReview = () => {
     const onSubmit = (data, event) => {
         console.log(data);
 
-        const url = `http://localhost:5000/review`;
+        const url = `https://aqueous-ravine-04948.herokuapp.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {

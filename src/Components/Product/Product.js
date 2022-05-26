@@ -14,7 +14,7 @@ const Product = ({product}) => {
         data-aos='flip-up'
         data-aos-duration='1000'
         data-aos-delay='200'
-        class={`card lg:w-96 sm:w-screen shadow-2xl  mt-5 border-2 border-secondary mx-10 mb-5`} >
+        class={`card lg:w-96 sm:w-full shadow-2xl  mt-5 border-2 border-secondary mx-10 mb-5`} >
         <figure><img style={{height:'200px',width:'250px'}} className='py-5' src={picture} alt="Album"/></figure>
         <div class="card-body">
           <h2 class="card-title">{name}</h2>

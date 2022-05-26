@@ -19,10 +19,10 @@ const Home = () => {
         <div className=''>
             <Banner></Banner>
             <div className=''>
-                <h2 className='text-center text-primary text-2xl font-bold'>Our Materials</h2>
+                <h2 className='text-center text-primary text-2xl font-bold mt-5'>Our Materials</h2>
                     <div className='grid grid-cols-1 lg:grid-cols-3'>
                     {
-                        products.slice(1,4).map(product=><Product key={product._id} product={product}></Product>)
+                        products.slice(0,3).reverse().map(product=><Product key={product._id} product={product}></Product>)
                     }
                     
                     </div>

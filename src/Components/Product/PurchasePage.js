@@ -95,6 +95,7 @@ const PurchasePage = () => {
                         <span class="label-text">Quantities Left</span>
                     </label>
                 <input type="text" name='quantity' placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs " value={product.total_quantity} disabled />
+               
                 </div>
                 <br />
                 <div class="form-control flex items-center">
@@ -120,7 +121,7 @@ const PurchasePage = () => {
                 <br />
 
                     <input className='btn btn-info my-4 fw-bold shadow' type="submit"
-                        disabled={disable < 100 || disable >= product.total_quantity}
+                        disabled={disable <100 || disable >= product.total_quantity}
                         value="Purchase" />
 
             </form>

@@ -13,9 +13,12 @@ const ManageProducts = () => {
     const handleDelete=id=>{
         const proceed= window.confirm('are you sure to remove the product');
         if(proceed){
-            const url=` http://localhost:5000/product/${id}`;
+            const url=` https://aqueous-ravine-04948.herokuapp.com/product/${id}`;
             fetch(url,{
                 method:'DELETE',
+                headers:{
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
             })
             .then(res=>res.json())
             .then(data=>{
