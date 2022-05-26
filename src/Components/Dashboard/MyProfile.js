@@ -13,11 +13,11 @@ const MyProfile = () => {
           const education=e.target.education.value
           const location=e.target.location.value
           const number=e.target.number.value
-          const linkdin=e.target.linkdin.value
+          const linkdin=e.target.linkdin?.value
           const email=user?.email
           const info={education,location,number,linkdin,email}
           console.log(info);
-          fetch(`http://localhost:5000/info/${email}`,{
+          fetch(`https://aqueous-ravine-04948.herokuapp.com/info/${email}`,{
             method: 'PUT',
             headers: {
               'content-type': 'application/json',
