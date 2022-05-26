@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Carpenters-hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was tailwinded with [Create React App](https://carpenters-hub.web.app/).
+
+# Used technologies and features
+* React
+* react hook form
+* tailwind
+* daisy ui
+* react router
+* strip for payment system
 
 ## Available Scripts
 

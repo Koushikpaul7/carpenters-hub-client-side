@@ -22,7 +22,7 @@ const Contact = () => {
                 <label class="label">
                   <span class="label-text">Your message</span>
                 </label>
-                <input type="text" placeholder="password" class="input input-bordered" />
+                <input type="text" placeholder="Your message" class="input input-bordered" />
               </div>
               <div class="form-control mt-6">
                 <button class="btn btn-primary">Submit</button>

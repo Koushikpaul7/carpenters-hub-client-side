@@ -19,7 +19,7 @@ const Banner = () => {
              data-aos='fade-right'
              data-aos-delay='400'
              data-aos-duration='900'
-            class="py-6 text-white font-bold font-mono">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            class="py-6 text-white font-bold font-mono">We are supplying the tools that you need in your carpentry shops and works. Browse our materials and order the best materials you. Carpenter-hub is wholesale Manufacturer.</p>
             <button
             data-aos='zoom-in'
             data-aos-delay='1000'

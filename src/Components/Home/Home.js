@@ -5,6 +5,7 @@ import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import Business from './Business';
 import Contact from './Contact';
+import Offer from './Offer';
 import Review from './Review';
 import Reviews from './Reviews';
 
@@ -21,7 +22,7 @@ const Home = () => {
                 <h2 className='text-center text-primary text-2xl font-bold mt-5'>Our Materials</h2>
                     <div className='grid grid-cols-1 lg:grid-cols-3'>
                     {
-                        products.slice(0,3).reverse().map(product=><Product key={product._id} product={product}></Product>)
+                        products.slice(2,5).reverse().map(product=><Product key={product._id} product={product}></Product>)
                     }
                     
                     </div>
@@ -30,6 +31,7 @@ const Home = () => {
                   </Link>
                 <Business></Business>
                 <Reviews></Reviews>
+                <Offer></Offer>
                 <Contact></Contact>
         </div>
     );
