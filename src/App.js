@@ -25,6 +25,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
 import Payment from './Components/Dashboard/Payment';
+import Blog from './Components/Blog/Blog';
+import Portfolio from './Components/Portfolio/Portfolio';
 
 function App() {
   useEffect(()=>{
@@ -36,6 +38,8 @@ function App() {
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
+       <Route path='/blog' element={<Blog></Blog>}></Route>
+       <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
        <Route path='/signup' element={<Signup></Signup>}></Route>
        <Route path='/products' element={<RequireAuth>
         <Products></Products>

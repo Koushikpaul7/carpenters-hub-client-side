@@ -16,9 +16,8 @@ const Home = () => {
         .then(data=>setProducts(data))
     },[])
     return (
-        <div className=''>
+        <div className='mx-12'>
             <Banner></Banner>
-            <div className=''>
                 <h2 className='text-center text-primary text-2xl font-bold mt-5'>Our Materials</h2>
                     <div className='grid grid-cols-1 lg:grid-cols-3'>
                     {
@@ -29,7 +28,6 @@ const Home = () => {
                   <Link to='/products'>
                   <button class="btn btn-wide btn-secondary  block text-white font-bold mx-auto">All Materials</button>
                   </Link>
-                </div>
                 <Business></Business>
                 <Reviews></Reviews>
                 <Contact></Contact>

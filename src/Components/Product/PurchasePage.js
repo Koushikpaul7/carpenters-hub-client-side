@@ -87,7 +87,7 @@ const PurchasePage = () => {
                     <label class="label">
                         <span class="label-text">Price per Material</span>
                     </label>
-                <input type="text" name='price' placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs " value={product.price} disabled />
+                <input type="text" name='price' placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs " value={product?.price} disabled />
                 </div>
                 <br />
                 <div class="form-control flex items-center">
